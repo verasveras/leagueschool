@@ -6,7 +6,11 @@ const ReactDOM = require('react-dom');
 class Header extends React.Component {
 
 	render() {
-		return <div> Dogs love League School </div>
+		return (<div> 
+			<img src="/images/LSLogoBar.png"/>
+			Dogs love League School 
+		</div>
+		)
 	}
 
 }
