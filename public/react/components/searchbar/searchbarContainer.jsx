@@ -9,7 +9,6 @@ class SearchbarContainer extends React.Component {
 
   	super(props);
   	this.state = store.getState();
-    console.log('The state is', this.state);
   	this.submitSummmer = this.submitSummmoner.bind(this);
 
   };
@@ -27,12 +26,11 @@ class SearchbarContainer extends React.Component {
   submitSummmoner (event) {
     event.preventDefault();
     let summonerName = event.target.summonerName.value;
-    store.dispatch(setSummonerName(summonerName)); //action-create); // dispatch an action creatore that will change the store.
+    store.dispatch(setSummonerName(summonerName)); // dispatch an action creatore that will change the store.
   }
 
   render () {
     let currentSummoner = this.state.name; 
-
   	return (
   		<Searchbar submitSummmoner={this.submitSummmoner} currentSummoner={currentSummoner}/>
   	)

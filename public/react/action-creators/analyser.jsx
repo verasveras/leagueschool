@@ -1,0 +1,1 @@
+const SET_GAMETIPS = require('../reducers/constants').SET_GAMETIPS;

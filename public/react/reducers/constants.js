@@ -1,6 +1,8 @@
 const constants = {
 	SET_SUMMONER_NAME: 'SET_SUMMONER_NAME',
-	SET_GAME: 'SET_GAME'
+	SET_SUMMONER_ID: 'SET_SUMMONER_ID',
+	SET_GAME: 'SET_GAME',
+	SET_GAMETIPS: 'SET_GAMETIPS'
 }
 
 module.exports = constants;

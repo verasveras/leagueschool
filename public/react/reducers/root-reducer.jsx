@@ -1,9 +1,12 @@
 const SET_SUMMONER_NAME = require('./constants.js').SET_SUMMONER_NAME;
+const SET_SUMMONER_ID = require('./constants').SET_SUMMONER_ID;
 const SET_GAME = require('./constants.js').SET_GAME;
 
 const initialSummonerState = {
-  name: '',
-  game: {}
+  name: null,
+  id: null,
+  game: null,
+  tips: null
 };
 
 module.exports = function (state = initialSummonerState, action) {
@@ -14,6 +17,10 @@ module.exports = function (state = initialSummonerState, action) {
 
     case SET_SUMMONER_NAME:
       newState.name = action.name;
+      break;
+
+    case SET_SUMMONER_ID:
+      newState.id = action.id;
       break;
 
     case SET_GAME:
