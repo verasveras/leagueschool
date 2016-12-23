@@ -21565,8 +21565,8 @@
 
 	var React = __webpack_require__(1);
 	var store = __webpack_require__(175);
-	var Searchbar = __webpack_require__(199);
-	var setSummonerName = __webpack_require__(200).setSummonerName; // action to add new summoner
+	var Searchbar = __webpack_require__(205);
+	var setSummonerName = __webpack_require__(206).setSummonerName; // action to add new summoner
 
 	var SearchbarContainer = function (_React$Component) {
 	  _inherits(SearchbarContainer, _React$Component);
@@ -21622,10 +21622,12 @@
 
 	const createStore = __webpack_require__(176).createStore;
 	const applyMiddleware = __webpack_require__(176).applyMiddleware;
-	const reduxLogger = __webpack_require__(201)();
-	const rootReducer = __webpack_require__(197);
+	const reduxLogger = __webpack_require__(197)();
+	const thunkMiddleware = __webpack_require__(207);
+	const rootReducer = __webpack_require__(203);
 
-	let middlewear = applyMiddleware(reduxLogger);
+	let middlewear = applyMiddleware(reduxLogger, thunkMiddleware);
+
 	module.exports = createStore(rootReducer, middlewear);
 
 /***/ },
@@ -22667,167 +22669,17 @@
 
 	'use strict';
 
-	var SET_SUMMONER_NAME = __webpack_require__(198).SET_SUMMONER_NAME;
-	var SET_SUMMONER_ID = __webpack_require__(198).SET_SUMMONER_ID;
-	var SET_GAME = __webpack_require__(198).SET_GAME;
-
-	var initialSummonerState = {
-	  name: null,
-	  id: null,
-	  game: null,
-	  tips: null
-	};
-
-	module.exports = function () {
-	  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialSummonerState;
-	  var action = arguments[1];
-
-
-	  var newState = Object.assign({}, state);
-
-	  switch (action.type) {
-
-	    case SET_SUMMONER_NAME:
-	      newState.name = action.name;
-	      break;
-
-	    case SET_SUMMONER_ID:
-	      newState.id = action.id;
-	      break;
-
-	    case SET_GAME:
-	      newState.game = action.game;
-	      break;
-
-	    default:
-	      return state;
-	  }
-
-	  return newState;
-	};
-
-/***/ },
-/* 198 */
-/***/ function(module, exports) {
-
-	const constants = {
-		SET_SUMMONER_NAME: 'SET_SUMMONER_NAME',
-		SET_SUMMONER_ID: 'SET_SUMMONER_ID',
-		SET_GAME: 'SET_GAME',
-		SET_GAMETIPS: 'SET_GAMETIPS'
-	}
-
-	module.exports = constants;
-
-
-/***/ },
-/* 199 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var React = __webpack_require__(1);
-	var ReactDOM = __webpack_require__(34);
-
-	var Searchbar = function (_React$Component) {
-		_inherits(Searchbar, _React$Component);
-
-		function Searchbar() {
-			_classCallCheck(this, Searchbar);
-
-			return _possibleConstructorReturn(this, (Searchbar.__proto__ || Object.getPrototypeOf(Searchbar)).apply(this, arguments));
-		}
-
-		_createClass(Searchbar, [{
-			key: 'render',
-			value: function render() {
-				var currentSummoner = this.props.currentSummoner;
-				var submitSummmoner = this.props.submitSummmoner;
-
-				return React.createElement(
-					'form',
-					{ onSubmit: submitSummmoner },
-					React.createElement('input', { type: 'text', name: 'summonerName', placeholder: currentSummoner }),
-					React.createElement('br', null),
-					React.createElement('input', { type: 'submit', value: 'Submit' })
-				);
-			}
-		}]);
-
-		return Searchbar;
-	}(React.Component);
-
-	module.exports = Searchbar;
-
-/***/ },
-/* 200 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var SET_SUMMONER_NAME = __webpack_require__(198).SET_SUMMONER_NAME;
-	var SET_SUMMONER_ID = __webpack_require__(198).SET_SUMMONER_ID;
-	var SET_GAME = __webpack_require__(198).SET_GAME;
-
-	function setSummonerName(name) {
-	  return {
-	    type: SET_SUMMONER_NAME,
-	    name: name
-	  };
-	};
-
-	function setSummonerID(id) {
-	  return {
-	    type: SET_GAME,
-	    name: name
-	  };
-	}
-
-	function setGame(game) {
-	  return {
-	    type: SET_GAME,
-	    name: name
-	  };
-	}
-
-	// GETTING THINGS -- CALL THESE AND LET THESE CALL SETTERS FOR YOU
-	function setSummonerGame(name) {
-	  return function (dispatch) {
-	    axios.get('/api/albums/' + albumId).then(function (response) {
-	      dispatch(setGame(response.data));
-	    });
-	  };
-	}
-
-	module.exports = {
-	  setSummonerName: setSummonerName
-	};
-
-/***/ },
-/* 201 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _core = __webpack_require__(202);
+	var _core = __webpack_require__(198);
 
-	var _helpers = __webpack_require__(203);
+	var _helpers = __webpack_require__(199);
 
-	var _defaults = __webpack_require__(206);
+	var _defaults = __webpack_require__(202);
 
 	var _defaults2 = _interopRequireDefault(_defaults);
 
@@ -22930,7 +22782,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 202 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22940,9 +22792,9 @@
 	});
 	exports.printBuffer = printBuffer;
 
-	var _helpers = __webpack_require__(203);
+	var _helpers = __webpack_require__(199);
 
-	var _diff = __webpack_require__(204);
+	var _diff = __webpack_require__(200);
 
 	var _diff2 = _interopRequireDefault(_diff);
 
@@ -23071,7 +22923,7 @@
 	}
 
 /***/ },
-/* 203 */
+/* 199 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -23095,7 +22947,7 @@
 	var timer = exports.timer = typeof performance !== "undefined" && performance !== null && typeof performance.now === "function" ? performance : Date;
 
 /***/ },
-/* 204 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23105,7 +22957,7 @@
 	});
 	exports.default = diffLogger;
 
-	var _deepDiff = __webpack_require__(205);
+	var _deepDiff = __webpack_require__(201);
 
 	var _deepDiff2 = _interopRequireDefault(_deepDiff);
 
@@ -23191,7 +23043,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 205 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {/*!
@@ -23620,7 +23472,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 206 */
+/* 202 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -23669,6 +23521,187 @@
 	  transformer: undefined
 	};
 	module.exports = exports['default'];
+
+/***/ },
+/* 203 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var SET_SUMMONER_NAME = __webpack_require__(204).SET_SUMMONER_NAME;
+	var SET_SUMMONER_ID = __webpack_require__(204).SET_SUMMONER_ID;
+	var SET_GAME = __webpack_require__(204).SET_GAME;
+
+	var initialSummonerState = {
+	  name: null,
+	  id: null,
+	  game: null,
+	  tips: null
+	};
+
+	module.exports = function () {
+	  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialSummonerState;
+	  var action = arguments[1];
+
+
+	  var newState = Object.assign({}, state);
+
+	  switch (action.type) {
+
+	    case SET_SUMMONER_NAME:
+	      newState.name = action.name;
+	      break;
+
+	    case SET_SUMMONER_ID:
+	      newState.id = action.id;
+	      break;
+
+	    case SET_GAME:
+	      newState.game = action.game;
+	      break;
+
+	    default:
+	      return state;
+	  }
+
+	  return newState;
+	};
+
+/***/ },
+/* 204 */
+/***/ function(module, exports) {
+
+	const constants = {
+		SET_SUMMONER_NAME: 'SET_SUMMONER_NAME',
+		SET_SUMMONER_ID: 'SET_SUMMONER_ID',
+		SET_GAME: 'SET_GAME',
+		SET_GAMETIPS: 'SET_GAMETIPS'
+	}
+
+	module.exports = constants;
+
+
+/***/ },
+/* 205 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(34);
+
+	var Searchbar = function (_React$Component) {
+		_inherits(Searchbar, _React$Component);
+
+		function Searchbar() {
+			_classCallCheck(this, Searchbar);
+
+			return _possibleConstructorReturn(this, (Searchbar.__proto__ || Object.getPrototypeOf(Searchbar)).apply(this, arguments));
+		}
+
+		_createClass(Searchbar, [{
+			key: 'render',
+			value: function render() {
+				var currentSummoner = this.props.currentSummoner;
+				var submitSummmoner = this.props.submitSummmoner;
+
+				return React.createElement(
+					'form',
+					{ onSubmit: submitSummmoner },
+					React.createElement('input', { type: 'text', name: 'summonerName', placeholder: currentSummoner }),
+					React.createElement('br', null),
+					React.createElement('input', { type: 'submit', value: 'Submit' })
+				);
+			}
+		}]);
+
+		return Searchbar;
+	}(React.Component);
+
+	module.exports = Searchbar;
+
+/***/ },
+/* 206 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var SET_SUMMONER_NAME = __webpack_require__(204).SET_SUMMONER_NAME;
+	var SET_SUMMONER_ID = __webpack_require__(204).SET_SUMMONER_ID;
+	var SET_GAME = __webpack_require__(204).SET_GAME;
+
+	function setSummonerName(name) {
+	  return {
+	    type: SET_SUMMONER_NAME,
+	    name: name
+	  };
+	};
+
+	function setSummonerID(id) {
+	  return {
+	    type: SET_GAME,
+	    name: name
+	  };
+	}
+
+	function setGame(game) {
+	  return {
+	    type: SET_GAME,
+	    name: name1
+	  };
+	}
+
+	// GETTING THINGS -- CALL THESE AND LET THESE CALL SETTERS FOR YOU
+
+	function getSummonerName() {
+	  return;
+	} // check if a valid name and get the id and set name.
+
+	function setSummonerGame(name) {
+	  return function (dispatch) {
+	    axios.get('~~~~~~~~~~').then(function (response) {
+	      dispatch(setGame(response.data));
+	    });
+	  };
+	}
+
+	module.exports = setSummonerName;
+
+/***/ },
+/* 207 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	exports.__esModule = true;
+	function createThunkMiddleware(extraArgument) {
+	  return function (_ref) {
+	    var dispatch = _ref.dispatch;
+	    var getState = _ref.getState;
+	    return function (next) {
+	      return function (action) {
+	        if (typeof action === 'function') {
+	          return action(dispatch, getState, extraArgument);
+	        }
+
+	        return next(action);
+	      };
+	    };
+	  };
+	}
+
+	var thunk = createThunkMiddleware();
+	thunk.withExtraArgument = createThunkMiddleware;
+
+	exports['default'] = thunk;
 
 /***/ }
 /******/ ]);
