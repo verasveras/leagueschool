@@ -2,6 +2,7 @@ const React = require('react');
 const store = require ('../../store.js');
 const Searchbar = require('./searchbar.jsx');
 const setSummonerName = require('../../action-creators/summoner.jsx').setSummonerName; // action to add new summoner
+const getSummonerName = require('../../action-creators/summoner.jsx').getSummonerName; // action to add new summoner
 
 class SearchbarContainer extends React.Component {
 
@@ -26,7 +27,7 @@ class SearchbarContainer extends React.Component {
   submitSummmoner (event) {
     event.preventDefault();
     let summonerName = event.target.summonerName.value;
-    store.dispatch(setSummonerName(summonerName)); // dispatch an action creatore that will change the store.
+    store.dispatch(getSummonerName(summonerName)); // dispatch an action creatore that will change the store.
   }
 
   render () {

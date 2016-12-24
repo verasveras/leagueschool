@@ -21567,6 +21567,7 @@
 	var store = __webpack_require__(175);
 	var Searchbar = __webpack_require__(205);
 	var setSummonerName = __webpack_require__(206).setSummonerName; // action to add new summoner
+	var getSummonerName = __webpack_require__(206).getSummonerName; // action to add new summoner
 
 	var SearchbarContainer = function (_React$Component) {
 	  _inherits(SearchbarContainer, _React$Component);
@@ -21601,7 +21602,7 @@
 	    value: function submitSummmoner(event) {
 	      event.preventDefault();
 	      var summonerName = event.target.summonerName.value;
-	      store.dispatch(setSummonerName(summonerName)); // dispatch an action creatore that will change the store.
+	      store.dispatch(getSummonerName(summonerName)); // dispatch an action creatore that will change the store.
 	    }
 	  }, {
 	    key: 'render',
@@ -21623,12 +21624,12 @@
 	const createStore = __webpack_require__(176).createStore;
 	const applyMiddleware = __webpack_require__(176).applyMiddleware;
 	const reduxLogger = __webpack_require__(197)();
-	const thunkMiddleware = __webpack_require__(207);
+	const thunkMiddleware = __webpack_require__(207).default;
 	const rootReducer = __webpack_require__(203);
 
-	let middlewear = applyMiddleware(reduxLogger, thunkMiddleware);
+	let middleware = applyMiddleware(reduxLogger, thunkMiddleware);
 
-	module.exports = createStore(rootReducer, middlewear);
+	module.exports = createStore(rootReducer, middleware);
 
 /***/ },
 /* 176 */
@@ -23637,6 +23638,7 @@
 	var SET_SUMMONER_NAME = __webpack_require__(204).SET_SUMMONER_NAME;
 	var SET_SUMMONER_ID = __webpack_require__(204).SET_SUMMONER_ID;
 	var SET_GAME = __webpack_require__(204).SET_GAME;
+	var RIOT_KEY = __webpack_require__(208);
 
 	function setSummonerName(name) {
 	  return {
@@ -23661,17 +23663,16 @@
 
 	// GETTING THINGS -- CALL THESE AND LET THESE CALL SETTERS FOR YOU
 
-	function getSummonerName() {
-	  return;
-	} // check if a valid name and get the id and set name.
-
-	function setSummonerGame(name) {
-	  return function (dispatch) {
-	    axios.get('~~~~~~~~~~').then(function (response) {
-	      dispatch(setGame(response.data));
+	function getSummonerName(name) {
+	  return function (dispatch, getstate) {
+	    axios.get('https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/' + name + '?api_key=' + RIOT_KEY).then(function (response) {
+	      console.log(response);
+	      dispatch(setSummonerName(name));
 	    });
 	  };
-	}
+	} // check if a valid name and get the id and set name.
+
+	function setSummonerGame(name) {}
 
 	module.exports = setSummonerName;
 
@@ -23702,6 +23703,14 @@
 	thunk.withExtraArgument = createThunkMiddleware;
 
 	exports['default'] = thunk;
+
+/***/ },
+/* 208 */
+/***/ function(module, exports) {
+
+	const riotKey = `RGAPI-2f6257e5-8e75-4a10-853c-0e8009f1632d`;
+
+	module.exports = riotKey;
 
 /***/ }
 /******/ ]);
