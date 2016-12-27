@@ -4,6 +4,8 @@ const Searchbar = require('./searchbar.jsx');
 const setSummonerName = require('../../action-creators/summoner.jsx').setSummonerName; // action to add new summoner
 const getSummonerName = require('../../action-creators/summoner.jsx').getSummonerName; // action to add new summoner
 
+// console.log('getSummonerName', getSummonerName);
+
 class SearchbarContainer extends React.Component {
 
   constructor(props){
