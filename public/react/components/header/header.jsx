@@ -7,8 +7,7 @@ class Header extends React.Component {
 
 	render() {
 		return (<div> 
-			<img src="/images/LSLogoBar.png"/>
-			Dogs love League School 
+			<center><img src="/images/LSLogoBar.png"/></center>
 		</div>
 		)
 	}

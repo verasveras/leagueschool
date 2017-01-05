@@ -21488,8 +21488,11 @@
 				return React.createElement(
 					'div',
 					null,
-					React.createElement('img', { src: '/images/LSLogoBar.png' }),
-					'Dogs love League School'
+					React.createElement(
+						'center',
+						null,
+						React.createElement('img', { src: '/images/LSLogoBar.png' })
+					)
 				);
 			}
 		}]);
@@ -23652,11 +23655,15 @@
 				var submitSummmoner = this.props.submitSummmoner;
 
 				return React.createElement(
-					'form',
-					{ onSubmit: submitSummmoner },
-					React.createElement('input', { type: 'text', name: 'summonerName', placeholder: currentSummoner }),
-					React.createElement('br', null),
-					React.createElement('input', { type: 'submit', value: 'Submit' })
+					'center',
+					null,
+					React.createElement(
+						'form',
+						{ onSubmit: submitSummmoner },
+						React.createElement('input', { type: 'text', name: 'summonerName', placeholder: currentSummoner }),
+						React.createElement('br', null),
+						React.createElement('input', { type: 'submit', value: 'Submit' })
+					)
 				);
 			}
 		}]);
