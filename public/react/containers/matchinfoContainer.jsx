@@ -2,15 +2,15 @@
 
 const React = require('react');
 const ReactDOM = require('react-dom');
-const store = require ('../store.js');
-const Summonerbar = require('../components/summonerbar.jsx');
+const Matchinfo = require('../components/matchinfo.jsx');
 
-class SummonerbarContainer extends React.Component {
+class MatchinfoContainer extends React.Component {
 
   constructor(){
     
   	super();
   	this.state = store.getState();
+  	this.submitSummmer = this.submitSummmoner.bind(this);
 
   };
 
@@ -26,11 +26,12 @@ class SummonerbarContainer extends React.Component {
 
 	render() {
 		return (<div> 
-			<Summonerbar name={this.state.name} level={this.state.level} id={this.state.id} />
+
+			
 		</div>
 		)
 	}
 
 }
 
-module.exports = SummonerbarContainer;
+module.exports = MatchinfoContainer;

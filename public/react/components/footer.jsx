@@ -10,6 +10,7 @@ class Footer extends React.Component {
 		const divStyle = {
   			backgroundColor: '#FCE97B', // '#312648' '#FCE97B'
   			textAlign: 'center',
+  			fontSize: '14px',
   			marginTop: '80%',
   			paddingTop: '7px',
   			paddingBottom: '7px',
@@ -17,7 +18,8 @@ class Footer extends React.Component {
 		}
 
 		return (<div style={divStyle}> 
-			Developed by <a href="http://lisaveras.com/">Lisa Veras</a><a href="http://twitter.com/lisaveras"> <img src="/images/twitter.svg"/></a> 
+			Developed by <a href="http://lisaveras.com/">Lisa Veras</a><br/>
+			Questions? Bugs? Contact me on <a href="http://twitter.com/lisaveras"> Twitter </a> 
 		</div>
 		)
 	}

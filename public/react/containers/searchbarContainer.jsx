@@ -8,9 +8,9 @@ const getSummonerName = require('../action-creators/summoner.jsx').getSummonerNa
 
 class SearchbarContainer extends React.Component {
 
-  constructor(props){
-
-  	super(props);
+  constructor(){
+    
+  	super();
   	this.state = store.getState();
   	this.submitSummmer = this.submitSummmoner.bind(this);
 
