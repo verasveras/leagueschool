@@ -21532,17 +21532,29 @@
 			key: 'render',
 			value: function render() {
 				var divStyle = {
-					backgroundColor: 'gray',
+					backgroundColor: '#FCE97B', // '#312648' '#FCE97B'
 					textAlign: 'center',
 					marginTop: '80%',
-					paddingTop: '10px',
-					paddingBottom: '10px'
+					paddingTop: '7px',
+					paddingBottom: '7px',
+					verticalAlign: 'middle'
 				};
 
 				return React.createElement(
 					'div',
 					{ style: divStyle },
-					'Twitter: @lisaveras'
+					'Developed by ',
+					React.createElement(
+						'a',
+						{ href: 'http://lisaveras.com/' },
+						'Lisa Veras'
+					),
+					React.createElement(
+						'a',
+						{ href: 'http://twitter.com/lisaveras' },
+						' ',
+						React.createElement('img', { src: '/images/twitter.svg' })
+					)
 				);
 			}
 		}]);
