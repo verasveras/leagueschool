@@ -23499,12 +23499,11 @@
 	function setGame(game) {
 	  return {
 	    type: SET_GAME,
-	    name: name1
+	    game: game
 	  };
 	}
 
 	// GETTING THINGS -- CALL THESE AND LET THESE CALL SETTERS FOR YOU
-
 	function getSummonerName(name) {
 	  return function (dispatch, getstate) {
 	    axios.get('https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/' + name + '?api_key=' + RIOT_KEY).then(function (response) {
@@ -23518,9 +23517,10 @@
 	  };
 	} // check if a valid name and get the id and set name.
 
-	function setSummonerGame(game) {}
-
-	module.exports = { setSummonerName: setSummonerName, getSummonerName: getSummonerName };
+	module.exports = {
+	  setSummonerName: setSummonerName,
+	  getSummonerName: getSummonerName
+	};
 
 /***/ },
 /* 208 */
