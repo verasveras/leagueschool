@@ -5,11 +5,14 @@ const ReactDOM = require('react-dom');
 
 class Summonerbar extends React.Component {
 
-	// #ffffdb
+	constructor() {
+		super();
+		this.state = store.getState();
+  	}
 
 	render() {
 		return (<div> 
-			
+			{this.state.name}
 		</div>
 		)
 	}

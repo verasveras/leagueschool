@@ -2,9 +2,9 @@
 
 const React = require('react');
 const ReactDOM = require('react-dom');
-const Header = require('./components/header/header.jsx');
-const Footer = require('./components/footer/footer.jsx');
-const SearchbarContainer = require('./components/searchbar/SearchbarContainer.jsx');
+const Header = require('./components/header.jsx');
+const Footer = require('./components/footer.jsx');
+const SearchbarContainer = require('./containers/SearchbarContainer.jsx');
 
 // import Header from 
 

@@ -1,8 +1,8 @@
 const React = require('react');
-const store = require ('../../store.js');
-const Searchbar = require('./searchbar.jsx');
-const setSummonerName = require('../../action-creators/summoner.jsx').setSummonerName; // action to add new summoner
-const getSummonerName = require('../../action-creators/summoner.jsx').getSummonerName; // action to add new summoner
+const store = require ('../store.js');
+const Searchbar = require('../components/searchbar.jsx');
+const setSummonerName = require('../action-creators/summoner.jsx').setSummonerName; // action to add new summoner
+const getSummonerName = require('../action-creators/summoner.jsx').getSummonerName; // action to add new summoner
 
 // console.log('getSummonerName', getSummonerName);
 
