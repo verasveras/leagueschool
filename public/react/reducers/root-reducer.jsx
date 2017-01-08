@@ -2,6 +2,7 @@ const SET_SUMMONER_NAME = require('./constants.js').SET_SUMMONER_NAME;
 const SET_SUMMONER_ID = require('./constants').SET_SUMMONER_ID;
 const SET_SUMMONER_LEVEL = require('./constants').SET_SUMMONER_LEVEL;
 const SET_GAME = require('./constants.js').SET_GAME;
+const SET_MATCHLIST = require('./constants.js').SET_MATCHLIST;
 
 const initialSummonerState = {
   name: null,
@@ -29,8 +30,8 @@ module.exports = function (state = initialSummonerState, action) {
       newState.level = action.level;
       break;
 
-    case SET_GAME:
-      newState.game = action.game;
+    case SET_MATCHLIST:
+      newState.matchlist = action.matchlist;
       break;
 
     default:

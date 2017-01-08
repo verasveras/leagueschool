@@ -3,6 +3,7 @@ const SET_SUMMONER_ID = require('../reducers/constants').SET_SUMMONER_ID;
 const SET_SUMMONER_LEVEL = require('../reducers/constants').SET_SUMMONER_LEVEL;
 const SET_GAME = require('../reducers/constants').SET_GAME;
 const RIOT_KEY = require('../../../keys.js');
+const getMatchlist = require('./match.jsx').getMatchlist;
 const axios = require('axios');
 
 
@@ -43,6 +44,7 @@ function getSummonerName (name){
         dispatch(setSummonerName(name));
         dispatch(setSummonerId(user.id));
         dispatch(setSummonerLevel(user.summonerLevel));
+        dispatch(getMatchlist(user.id));
       })
       .catch(error => {
         console.log(error);
@@ -51,7 +53,7 @@ function getSummonerName (name){
 
 } // check if a valid name and get the id and set name.
 
-module.exports = {
+module.exports = { 
   setSummonerName, 
-  getSummonerName
+  getSummonerName 
 };

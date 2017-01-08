@@ -56,10 +56,10 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(34);
-	var Header = __webpack_require__(234);
-	var Footer = __webpack_require__(235);
-	var SearchbarContainer = __webpack_require__(239);
-	var SummonerbarContainer = __webpack_require__(240);
+	var Header = __webpack_require__(172);
+	var Footer = __webpack_require__(173);
+	var SearchbarContainer = __webpack_require__(174);
+	var SummonerbarContainer = __webpack_require__(235);
 
 	// import Header from 
 
@@ -21459,9 +21459,186 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 172 */,
-/* 173 */,
-/* 174 */,
+/* 172 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(34);
+
+	var Header = function (_React$Component) {
+		_inherits(Header, _React$Component);
+
+		function Header() {
+			_classCallCheck(this, Header);
+
+			return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+		}
+
+		_createClass(Header, [{
+			key: 'render',
+			value: function render() {
+				return React.createElement(
+					'div',
+					null,
+					React.createElement(
+						'center',
+						null,
+						React.createElement('img', { src: '/images/LSLogoBar.png' })
+					)
+				);
+			}
+		}]);
+
+		return Header;
+	}(React.Component);
+
+	module.exports = Header;
+
+/***/ },
+/* 173 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(34);
+
+	var Footer = function (_React$Component) {
+		_inherits(Footer, _React$Component);
+
+		function Footer() {
+			_classCallCheck(this, Footer);
+
+			return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+		}
+
+		_createClass(Footer, [{
+			key: 'render',
+			value: function render() {
+				var divStyle = {
+					backgroundColor: '#FCE97B', // '#312648' '#FCE97B'
+					textAlign: 'center',
+					fontSize: '14px',
+					marginTop: '80%',
+					paddingTop: '7px',
+					paddingBottom: '7px',
+					verticalAlign: 'middle'
+				};
+
+				return React.createElement(
+					'div',
+					{ style: divStyle },
+					'Developed by ',
+					React.createElement(
+						'a',
+						{ href: 'http://lisaveras.com/' },
+						'Lisa Veras'
+					),
+					React.createElement('br', null),
+					'Questions? Bugs? Contact me on ',
+					React.createElement(
+						'a',
+						{ href: 'http://twitter.com/lisaveras' },
+						' Twitter '
+					)
+				);
+			}
+		}]);
+
+		return Footer;
+	}(React.Component);
+
+	module.exports = Footer;
+
+/***/ },
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var React = __webpack_require__(1);
+	var store = __webpack_require__(175);
+	var Searchbar = __webpack_require__(206);
+	var setSummonerName = __webpack_require__(207).setSummonerName; // action to add new summoner
+	var getSummonerName = __webpack_require__(207).getSummonerName; // action to add new summoner
+
+	// console.log('getSummonerName', getSummonerName);
+
+	var SearchbarContainer = function (_React$Component) {
+	  _inherits(SearchbarContainer, _React$Component);
+
+	  function SearchbarContainer() {
+	    _classCallCheck(this, SearchbarContainer);
+
+	    var _this = _possibleConstructorReturn(this, (SearchbarContainer.__proto__ || Object.getPrototypeOf(SearchbarContainer)).call(this));
+
+	    _this.state = store.getState();
+	    _this.submitSummmer = _this.submitSummmoner.bind(_this);
+
+	    return _this;
+	  }
+
+	  _createClass(SearchbarContainer, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this2 = this;
+
+	      this.unsubscribe = store.subscribe(function () {
+	        _this2.setState(store.getState());
+	      }); // subscribe takes a callback function and returns and unsubcribe function.
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.unsubscribe();
+	    }
+	  }, {
+	    key: 'submitSummmoner',
+	    value: function submitSummmoner(event) {
+	      event.preventDefault();
+	      var summonerName = event.target.summonerName.value;
+	      store.dispatch(getSummonerName(summonerName)); // dispatch an action creatore that will change the store.
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var currentSummoner = this.state.name;
+	      return React.createElement(Searchbar, { submitSummmoner: this.submitSummmoner, currentSummoner: currentSummoner });
+	    }
+	  }]);
+
+	  return SearchbarContainer;
+	}(React.Component);
+
+	module.exports = SearchbarContainer;
+
+/***/ },
 /* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -23405,6 +23582,7 @@
 	var SET_SUMMONER_ID = __webpack_require__(205).SET_SUMMONER_ID;
 	var SET_SUMMONER_LEVEL = __webpack_require__(205).SET_SUMMONER_LEVEL;
 	var SET_GAME = __webpack_require__(205).SET_GAME;
+	var SET_MATCHLIST = __webpack_require__(205).SET_MATCHLIST;
 
 	var initialSummonerState = {
 	  name: null,
@@ -23435,8 +23613,8 @@
 	      newState.level = action.level;
 	      break;
 
-	    case SET_GAME:
-	      newState.game = action.game;
+	    case SET_MATCHLIST:
+	      newState.matchlist = action.matchlist;
 	      break;
 
 	    default:
@@ -23454,7 +23632,9 @@
 		SET_SUMMONER_NAME: 'SET_SUMMONER_NAME',
 		SET_SUMMONER_ID: 'SET_SUMMONER_ID',
 		SET_SUMMONER_LEVEL: 'SET_SUMMONER_LEVEL',
-		SET_GAME: 'SET_GAME',
+		SET_MATCHLIST: 'SET_MATCHLIST',
+		SET_MATCHES: 'SET_MATCHES',
+		SET_POSITIONS: 'SET_POSITIONS',
 		SET_GAMETIPS: 'SET_GAMETIPS'
 	}
 
@@ -23462,7 +23642,57 @@
 
 
 /***/ },
-/* 206 */,
+/* 206 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(34);
+
+	var Searchbar = function (_React$Component) {
+		_inherits(Searchbar, _React$Component);
+
+		function Searchbar() {
+			_classCallCheck(this, Searchbar);
+
+			return _possibleConstructorReturn(this, (Searchbar.__proto__ || Object.getPrototypeOf(Searchbar)).apply(this, arguments));
+		}
+
+		_createClass(Searchbar, [{
+			key: 'render',
+			value: function render() {
+				var currentSummoner = this.props.currentSummoner;
+				var submitSummmoner = this.props.submitSummmoner;
+
+				return React.createElement(
+					'center',
+					null,
+					React.createElement(
+						'form',
+						{ onSubmit: submitSummmoner },
+						React.createElement('input', { type: 'text', name: 'summonerName', placeholder: currentSummoner }),
+						React.createElement('br', null),
+						React.createElement('input', { type: 'submit', value: 'Submit' })
+					)
+				);
+			}
+		}]);
+
+		return Searchbar;
+	}(React.Component);
+
+	module.exports = Searchbar;
+
+/***/ },
 /* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -23473,7 +23703,8 @@
 	var SET_SUMMONER_LEVEL = __webpack_require__(205).SET_SUMMONER_LEVEL;
 	var SET_GAME = __webpack_require__(205).SET_GAME;
 	var RIOT_KEY = __webpack_require__(208);
-	var axios = __webpack_require__(209);
+	var getMatchlist = __webpack_require__(209).getMatchlist;
+	var axios = __webpack_require__(210);
 
 	function setSummonerName(name) {
 	  return {
@@ -23511,6 +23742,7 @@
 	      dispatch(setSummonerName(name));
 	      dispatch(setSummonerId(user.id));
 	      dispatch(setSummonerLevel(user.summonerLevel));
+	      dispatch(getMatchlist(user.id));
 	    }).catch(function (error) {
 	      console.log(error);
 	    });
@@ -23534,18 +23766,92 @@
 /* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(210);
+	'use strict';
+
+	// https://na.api.pvp.net/api/lol/na/v2.2/matchlist/by-summoner/32401288?api_key=RGAPI-2f6257e5-8e75-4a10-853c-0e8009f1632d
+	var SET_MATCHLIST = __webpack_require__(205).SET_MATCHLIST;
+	var SET_POSITIONS = __webpack_require__(205).SET_POSITIONS;
+	var RIOT_KEY = __webpack_require__(208);
+	var axios = __webpack_require__(210);
+
+	function getMatchlist(summonerId) {
+	  return function (dispatch, getstate) {
+	    axios.get('https://na.api.pvp.net/api/lol/na/v2.2/matchlist/by-summoner/' + summonerId + '?api_key=' + RIOT_KEY).then(function (response) {
+	      var matches = response.data.matches || [];
+
+	      var positions = {
+	        TOP: 0,
+	        MID: 0,
+	        JUNGLE: 0,
+	        DUO_CARRY: 0,
+	        DUO_SUPPORT: 0
+	      };
+
+	      var matchlist = matches.map(function (match) {
+
+	        if (match.lane === 'MID' || match.lane === 'MIDDLE') {
+	          console.log('Adding to mid probably');
+	          positions.MID++;
+	        } else if (match.lane === 'BOT' || match.lane === 'BOTTOM') {
+	          console.log(match.lane);
+	          if (match.role === 'DUO_CARRY') positions.DUO_CARRY++;
+	          if (match.role === 'DUO_SUPPORT') positions.DUO_SUPPORT++;
+	        } else {
+	          positions[match.lane]++;
+	        }
+
+	        return match.matchId;
+	      });
+
+	      /* lane: Participant's lane (Legal values: MID, MIDDLE, TOP, JUNGLE, BOT, BOTTOM)
+	      role: Participant's role (Legal values: DUO, NONE, SOLO, DUO_CARRY, DUO_SUPPORT) */
+	      console.log('These are the positions', positions);
+	      dispatch(setPositions(positions));
+	      dispatch(setMatchlist(matchlist));
+	    }).catch(function (error) {
+	      console.log(error);
+	    });
+	  };
+	}
+
+	function setMatchlist(matchlist) {
+	  return {
+	    type: SET_MATCHLIST,
+	    matchlist: matchlist
+	  };
+	}
+
+	module.exports = {
+	  getMatchlist: getMatchlist
+	};
+
+	function setPositions(positions) {
+	  return {
+	    type: SET_POSITIONS,
+	    positions: positions
+	  };
+	}
+
+	module.exports = {
+	  getMatchlist: getMatchlist
+	};
 
 /***/ },
 /* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = __webpack_require__(211);
+
+/***/ },
+/* 211 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 
-	var utils = __webpack_require__(211);
-	var bind = __webpack_require__(212);
-	var Axios = __webpack_require__(213);
-	var defaults = __webpack_require__(214);
+	var utils = __webpack_require__(212);
+	var bind = __webpack_require__(213);
+	var Axios = __webpack_require__(214);
+	var defaults = __webpack_require__(215);
 
 	/**
 	 * Create an instance of Axios
@@ -23578,15 +23884,15 @@
 	};
 
 	// Expose Cancel & CancelToken
-	axios.Cancel = __webpack_require__(231);
-	axios.CancelToken = __webpack_require__(232);
-	axios.isCancel = __webpack_require__(228);
+	axios.Cancel = __webpack_require__(232);
+	axios.CancelToken = __webpack_require__(233);
+	axios.isCancel = __webpack_require__(229);
 
 	// Expose all/spread
 	axios.all = function all(promises) {
 	  return Promise.all(promises);
 	};
-	axios.spread = __webpack_require__(233);
+	axios.spread = __webpack_require__(234);
 
 	module.exports = axios;
 
@@ -23595,12 +23901,12 @@
 
 
 /***/ },
-/* 211 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var bind = __webpack_require__(212);
+	var bind = __webpack_require__(213);
 
 	/*global toString:true*/
 
@@ -23900,7 +24206,7 @@
 
 
 /***/ },
-/* 212 */
+/* 213 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -23917,17 +24223,17 @@
 
 
 /***/ },
-/* 213 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var defaults = __webpack_require__(214);
-	var utils = __webpack_require__(211);
-	var InterceptorManager = __webpack_require__(225);
-	var dispatchRequest = __webpack_require__(226);
-	var isAbsoluteURL = __webpack_require__(229);
-	var combineURLs = __webpack_require__(230);
+	var defaults = __webpack_require__(215);
+	var utils = __webpack_require__(212);
+	var InterceptorManager = __webpack_require__(226);
+	var dispatchRequest = __webpack_require__(227);
+	var isAbsoluteURL = __webpack_require__(230);
+	var combineURLs = __webpack_require__(231);
 
 	/**
 	 * Create a new instance of Axios
@@ -24008,13 +24314,13 @@
 
 
 /***/ },
-/* 214 */
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var utils = __webpack_require__(211);
-	var normalizeHeaderName = __webpack_require__(215);
+	var utils = __webpack_require__(212);
+	var normalizeHeaderName = __webpack_require__(216);
 
 	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
 	var DEFAULT_CONTENT_TYPE = {
@@ -24031,10 +24337,10 @@
 	  var adapter;
 	  if (typeof XMLHttpRequest !== 'undefined') {
 	    // For browsers use XHR adapter
-	    adapter = __webpack_require__(216);
+	    adapter = __webpack_require__(217);
 	  } else if (typeof process !== 'undefined') {
 	    // For node use HTTP adapter
-	    adapter = __webpack_require__(216);
+	    adapter = __webpack_require__(217);
 	  }
 	  return adapter;
 	}
@@ -24108,12 +24414,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 215 */
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(211);
+	var utils = __webpack_require__(212);
 
 	module.exports = function normalizeHeaderName(headers, normalizedName) {
 	  utils.forEach(headers, function processHeader(value, name) {
@@ -24126,18 +24432,18 @@
 
 
 /***/ },
-/* 216 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var utils = __webpack_require__(211);
-	var settle = __webpack_require__(217);
-	var buildURL = __webpack_require__(220);
-	var parseHeaders = __webpack_require__(221);
-	var isURLSameOrigin = __webpack_require__(222);
-	var createError = __webpack_require__(218);
-	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(223);
+	var utils = __webpack_require__(212);
+	var settle = __webpack_require__(218);
+	var buildURL = __webpack_require__(221);
+	var parseHeaders = __webpack_require__(222);
+	var isURLSameOrigin = __webpack_require__(223);
+	var createError = __webpack_require__(219);
+	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(224);
 
 	module.exports = function xhrAdapter(config) {
 	  return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -24233,7 +24539,7 @@
 	    // This is only done if running in a standard browser environment.
 	    // Specifically not if we're in a web worker, or react-native.
 	    if (utils.isStandardBrowserEnv()) {
-	      var cookies = __webpack_require__(224);
+	      var cookies = __webpack_require__(225);
 
 	      // Add xsrf header
 	      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -24310,12 +24616,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 217 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var createError = __webpack_require__(218);
+	var createError = __webpack_require__(219);
 
 	/**
 	 * Resolve or reject a Promise based on response status.
@@ -24341,12 +24647,12 @@
 
 
 /***/ },
-/* 218 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var enhanceError = __webpack_require__(219);
+	var enhanceError = __webpack_require__(220);
 
 	/**
 	 * Create an Error with the specified message, config, error code, and response.
@@ -24364,7 +24670,7 @@
 
 
 /***/ },
-/* 219 */
+/* 220 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -24389,12 +24695,12 @@
 
 
 /***/ },
-/* 220 */
+/* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(211);
+	var utils = __webpack_require__(212);
 
 	function encode(val) {
 	  return encodeURIComponent(val).
@@ -24463,12 +24769,12 @@
 
 
 /***/ },
-/* 221 */
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(211);
+	var utils = __webpack_require__(212);
 
 	/**
 	 * Parse headers into an object
@@ -24506,12 +24812,12 @@
 
 
 /***/ },
-/* 222 */
+/* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(211);
+	var utils = __webpack_require__(212);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -24580,7 +24886,7 @@
 
 
 /***/ },
-/* 223 */
+/* 224 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -24622,12 +24928,12 @@
 
 
 /***/ },
-/* 224 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(211);
+	var utils = __webpack_require__(212);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -24681,12 +24987,12 @@
 
 
 /***/ },
-/* 225 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(211);
+	var utils = __webpack_require__(212);
 
 	function InterceptorManager() {
 	  this.handlers = [];
@@ -24739,15 +25045,15 @@
 
 
 /***/ },
-/* 226 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(211);
-	var transformData = __webpack_require__(227);
-	var isCancel = __webpack_require__(228);
-	var defaults = __webpack_require__(214);
+	var utils = __webpack_require__(212);
+	var transformData = __webpack_require__(228);
+	var isCancel = __webpack_require__(229);
+	var defaults = __webpack_require__(215);
 
 	/**
 	 * Throws a `Cancel` if cancellation has been requested.
@@ -24824,12 +25130,12 @@
 
 
 /***/ },
-/* 227 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(211);
+	var utils = __webpack_require__(212);
 
 	/**
 	 * Transform the data for a request or a response
@@ -24850,7 +25156,7 @@
 
 
 /***/ },
-/* 228 */
+/* 229 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -24861,7 +25167,7 @@
 
 
 /***/ },
-/* 229 */
+/* 230 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -24881,7 +25187,7 @@
 
 
 /***/ },
-/* 230 */
+/* 231 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -24899,7 +25205,7 @@
 
 
 /***/ },
-/* 231 */
+/* 232 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -24924,12 +25230,12 @@
 
 
 /***/ },
-/* 232 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var Cancel = __webpack_require__(231);
+	var Cancel = __webpack_require__(232);
 
 	/**
 	 * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -24987,7 +25293,7 @@
 
 
 /***/ },
-/* 233 */
+/* 234 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25020,52 +25326,6 @@
 
 
 /***/ },
-/* 234 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var React = __webpack_require__(1);
-	var ReactDOM = __webpack_require__(34);
-
-	var Header = function (_React$Component) {
-		_inherits(Header, _React$Component);
-
-		function Header() {
-			_classCallCheck(this, Header);
-
-			return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
-		}
-
-		_createClass(Header, [{
-			key: 'render',
-			value: function render() {
-				return React.createElement(
-					'div',
-					null,
-					React.createElement(
-						'center',
-						null,
-						React.createElement('img', { src: '/images/LSLogoBar.png' })
-					)
-				);
-			}
-		}]);
-
-		return Header;
-	}(React.Component);
-
-	module.exports = Header;
-
-/***/ },
 /* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -25081,195 +25341,8 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(34);
-
-	var Footer = function (_React$Component) {
-		_inherits(Footer, _React$Component);
-
-		function Footer() {
-			_classCallCheck(this, Footer);
-
-			return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
-		}
-
-		_createClass(Footer, [{
-			key: 'render',
-			value: function render() {
-				var divStyle = {
-					backgroundColor: '#FCE97B', // '#312648' '#FCE97B'
-					textAlign: 'center',
-					fontSize: '14px',
-					marginTop: '80%',
-					paddingTop: '7px',
-					paddingBottom: '7px',
-					verticalAlign: 'middle'
-				};
-
-				return React.createElement(
-					'div',
-					{ style: divStyle },
-					'Developed by ',
-					React.createElement(
-						'a',
-						{ href: 'http://lisaveras.com/' },
-						'Lisa Veras'
-					),
-					React.createElement('br', null),
-					'Questions? Bugs? Contact me on ',
-					React.createElement(
-						'a',
-						{ href: 'http://twitter.com/lisaveras' },
-						' Twitter '
-					)
-				);
-			}
-		}]);
-
-		return Footer;
-	}(React.Component);
-
-	module.exports = Footer;
-
-/***/ },
-/* 236 */,
-/* 237 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var React = __webpack_require__(1);
-	var ReactDOM = __webpack_require__(34);
-
-	var Searchbar = function (_React$Component) {
-		_inherits(Searchbar, _React$Component);
-
-		function Searchbar() {
-			_classCallCheck(this, Searchbar);
-
-			return _possibleConstructorReturn(this, (Searchbar.__proto__ || Object.getPrototypeOf(Searchbar)).apply(this, arguments));
-		}
-
-		_createClass(Searchbar, [{
-			key: 'render',
-			value: function render() {
-				var currentSummoner = this.props.currentSummoner;
-				var submitSummmoner = this.props.submitSummmoner;
-
-				return React.createElement(
-					'center',
-					null,
-					React.createElement(
-						'form',
-						{ onSubmit: submitSummmoner },
-						React.createElement('input', { type: 'text', name: 'summonerName', placeholder: currentSummoner }),
-						React.createElement('br', null),
-						React.createElement('input', { type: 'submit', value: 'Submit' })
-					)
-				);
-			}
-		}]);
-
-		return Searchbar;
-	}(React.Component);
-
-	module.exports = Searchbar;
-
-/***/ },
-/* 238 */,
-/* 239 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var React = __webpack_require__(1);
 	var store = __webpack_require__(175);
-	var Searchbar = __webpack_require__(237);
-	var setSummonerName = __webpack_require__(207).setSummonerName; // action to add new summoner
-	var getSummonerName = __webpack_require__(207).getSummonerName; // action to add new summoner
-
-	// console.log('getSummonerName', getSummonerName);
-
-	var SearchbarContainer = function (_React$Component) {
-	  _inherits(SearchbarContainer, _React$Component);
-
-	  function SearchbarContainer() {
-	    _classCallCheck(this, SearchbarContainer);
-
-	    var _this = _possibleConstructorReturn(this, (SearchbarContainer.__proto__ || Object.getPrototypeOf(SearchbarContainer)).call(this));
-
-	    _this.state = store.getState();
-	    _this.submitSummmer = _this.submitSummmoner.bind(_this);
-
-	    return _this;
-	  }
-
-	  _createClass(SearchbarContainer, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      var _this2 = this;
-
-	      this.unsubscribe = store.subscribe(function () {
-	        _this2.setState(store.getState());
-	      }); // subscribe takes a callback function and returns and unsubcribe function.
-	    }
-	  }, {
-	    key: 'componentWillUnmount',
-	    value: function componentWillUnmount() {
-	      this.unsubscribe();
-	    }
-	  }, {
-	    key: 'submitSummmoner',
-	    value: function submitSummmoner(event) {
-	      event.preventDefault();
-	      var summonerName = event.target.summonerName.value;
-	      store.dispatch(getSummonerName(summonerName)); // dispatch an action creatore that will change the store.
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var currentSummoner = this.state.name;
-	      return React.createElement(Searchbar, { submitSummmoner: this.submitSummmoner, currentSummoner: currentSummoner });
-	    }
-	  }]);
-
-	  return SearchbarContainer;
-	}(React.Component);
-
-	module.exports = SearchbarContainer;
-
-/***/ },
-/* 240 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var React = __webpack_require__(1);
-	var ReactDOM = __webpack_require__(34);
-	var store = __webpack_require__(175);
-	var Summonerbar = __webpack_require__(241);
+	var Summonerbar = __webpack_require__(236);
 
 	var SummonerbarContainer = function (_React$Component) {
 	  _inherits(SummonerbarContainer, _React$Component);
@@ -25315,7 +25388,7 @@
 	module.exports = SummonerbarContainer;
 
 /***/ },
-/* 241 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
